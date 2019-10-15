@@ -14,8 +14,8 @@ module.exports = {
 
     // Various Dev Server settings
     // host: '0.0.0.0'
-    host: 'localhost', // can be overwritten by process.env.HOST
-    port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    host: '192.168.0.65', // can be overwritten by process.env.HOST
+    port: 3000, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
@@ -37,7 +37,7 @@ module.exports = {
     cssSourceMap: true,
     proxyTable: {
       '/api': {
-        target: 'http://localhost:9191',// 请换成你的地址
+        target: 'http://192.168.0.88:9191',// 请换成你的地址
         changeOrigin: true,
         pathRewrite: {
           '^/api': ''

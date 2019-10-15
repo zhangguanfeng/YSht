@@ -522,7 +522,7 @@ export default new Router({
         {
 
           path: '/admaqyvip',
-          component: resolve => require(['../components/admpage/AdmAqyVip.vue'], resolve),
+          component: resolve => require(['../components/admpage/AdmAqyVip/AdmAqyVip.vue'], resolve),
           meta: {
             title: '点播vip管理'
           },

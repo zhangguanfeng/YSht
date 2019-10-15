@@ -19,7 +19,8 @@ Vue.use( Vuex )
 // serverIp:"http://47.106.218.143:9191"
 const store = new Vuex.Store({
   state:{ 
-    serverIp:"http://cloud.nhw6.com:9191"
+    // serverIp:"http://cloud.nhw6.com:9191"
+    serverIp:"http://192.168.0.88:9191"
   }
 })
 new Vue({

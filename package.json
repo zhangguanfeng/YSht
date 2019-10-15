@@ -5,7 +5,7 @@
   "author": "",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js --open --port 3000 --hot --host 0.0.0.0",
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js --open --port 3000 --hot --host 192.168.0.65",
     "start": "npm run dev",
     "build": "node build/build.js"
   },

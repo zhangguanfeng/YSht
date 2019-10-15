@@ -82,6 +82,8 @@
           var formdata = new FormData(); // 创建form对象
           formdata.append("file", this.adFile)
           formdata.append("imgId", this.datas_upload[this.adIndex].imgId + "")
+          console.log(formdata,'6666');
+          
           this.$axios
             .post("/api/hoInIndex/uploadad", formdata)
             .then(res => {

@@ -234,6 +234,21 @@ function limitFile(file) {
   }
   return isLt5M
 }
+// 点播vip上传
+function limit_Apk(file){
+  const isLt100M = file.size / 1024 / 1024 < 100;
+  var testmsg = file.name.substring(file.name.lastIndexOf('.') + 1)
+  var testmsgs = file.name.substring(file.name.IndexOf('.') - 2,file.name.IndexOf('.') - 1)
+  const extensions = testmsgs === '-'
+  const extension = testmsg === 'apk'
+  if (!extension && !extensions) {
+    Message.error('上传APP不符合版本格式，且要apk格式！');
+  }
+  if (!isLt100M) {
+    Message.error('上传app大小不能超过 100MB!');
+  }
+  return extension && isLt100M
+}
 function limitApk(file) {
   console.log(file.type)
   // const isJPG = file.type === 'image/jpeg';
@@ -287,6 +302,7 @@ function strLength(str) {
   return str.replace(/[^\x00-\xff]/g,"01").length;
 }
 export { //很关键
+  limit_Apk,
   isEmpty,
   isMobile,
   isNumber,
