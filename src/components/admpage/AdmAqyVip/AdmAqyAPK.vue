@@ -2,9 +2,9 @@
   <div class="AdmAqyAPK">
     <!-- 启动器管理 -->
     <div>
-      <el-button type="primary" @click="handleInitiator()">上传</el-button>
-      <input type="file" class="upload" ref="testapk" @change="handleInitiatorUploadTestApk(e)" id="InitiatorApkId"
-        style="display: none;" value="">
+      <el-button type="primary" @click="handleInitiator">上传</el-button>
+      <input type="file" class="upload" ref="testapk" @change="handleInitiatorUploadTestApk" id="InitiatorApkId"
+        style="display: none;">
     </div>
     <el-table :data="initiatorList" stripe style="width: 100%"
       :header-cell-style="{background:'#a5b3c6', color:'#ffffff'}">
@@ -48,8 +48,10 @@ import {
         document.getElementById("InitiatorApkId").click();
       },
       handleInitiatorUploadTestApk(e) {
+        console.log(e,'123456');
+        
         this.files = e.target.files
-        const rawFile = files[0]
+        const rawFile = this.files[0]
         var a = rawFile.name.split("-");
         var appVersion = ''
         if (a.length === 3) {
